@@ -130,23 +130,16 @@ JPA는 낙관적 락을 위해 `@Version` 어노테이션을 제공하고 있�
 ![image (4)](https://github.com/user-attachments/assets/248197a2-f8db-4b3f-b45a-938d186073d1)
 
 
-LockModeType	설명
-NONE	▪ 잠금을 사용하지 않음
-▪ 기본값
-OPTIMISTIC	▪ 낙관적 잠금 사용
-▪ 데이터 변경 시 다른 트랜잭션에 의한 변경 확인
-▪ @Version 애노테이션을 사용하여 버전 컬럼 관리
-OPTIMISTIC_FORCE_INCREMENT	▪ 낙관적 잠금 사용
-▪ 잠금이 걸린 엔티티의 버전을 강제로 증가시킴
-▪ 다른 트랜잭션에서 해당 엔티티를 읽을 때 충돌을 일으킴
-PESSIMISTIC_READ	▪ 비관적 잠금 사용
-▪ 엔티티를 읽은 트랜잭션이 완료될 때까지 다른 트랜잭션에서 해당 엔티티 변경 방지 
-▪ 다른 트랜잭션에서는 해당 엔티티를 읽을 수 있음
-PESSIMISTIC_WRITE	▪ 비관적 잠금 사용
-▪ 엔티티를 읽은 트랜잭션이 완료될 때까지 다른 트랜잭션에서 해당 엔티티를 읽거나 쓸 수 없게 함
-PESSIMISTIC_FORCE_INCREMENT	▪ 비관적 잠금 사용
-▪ 잠금이 걸린 엔티티의 버전을 강제로 증가시킴
-▪ 다른 트랜잭션에서 해당 엔티티를 읽을 때 충돌을 일으킴
+### 🔒 LockModeType 종류 정리
+
+| LockModeType                | 설명 |
+|----------------------------|------|
+| `NONE`                     | ▪ 잠금을 사용하지 않음<br>▪ 기본값 |
+| `OPTIMISTIC`               | ▪ 낙관적 잠금 사용<br>▪ 데이터 변경 시 다른 트랜잭션에 의한 변경 확인<br>▪ `@Version` 애노테이션을 사용하여 버전 컬럼 관리 |
+| `OPTIMISTIC_FORCE_INCREMENT` | ▪ 낙관적 잠금 사용<br>▪ 잠금이 걸린 엔티티의 버전을 강제로 증가시킴<br>▪ 다른 트랜잭션에서 해당 엔티티를 읽을 때 충돌을 일으킴 |
+| `PESSIMISTIC_READ`         | ▪ 비관적 잠금 사용<br>▪ 엔티티를 읽은 트랜잭션이 완료될 때까지 다른 트랜잭션에서 해당 엔티티 변경 방지<br>▪ 다른 트랜잭션에서는 해당 엔티티를 읽을 수 있음 |
+| `PESSIMISTIC_WRITE`        | ▪ 비관적 잠금 사용<br>▪ 엔티티를 읽은 트랜잭션이 완료될 때까지 다른 트랜잭션에서 해당 엔티티를 읽거나 쓸 수 없게 함 |
+| `PESSIMISTIC_FORCE_INCREMENT` | ▪ 비관적 잠금 사용<br>▪ 잠금이 걸린 엔티티의 버전을 강제로 증가시킴<br>▪ 다른 트랜잭션에서 해당 엔티티를 읽을 때 충돌을 일으킴 |
 
 3. @Transactional isolation level을 조절해서 트랜잭션 접근 및 활동을 제한하는 방법
 격리 단계 (Isolation Level)	설명

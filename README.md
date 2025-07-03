@@ -136,6 +136,8 @@ JPA는 낙관적 락을 위해 `@Version` 어노테이션을 제공하고 있�
   <img src="https://github.com/user-attachments/assets/c5b3cede-1f70-4405-ab8d-8fc63c0670ee" alt="image (3)" width="400" />
   <img src="https://github.com/user-attachments/assets/248197a2-f8db-4b3f-b45a-938d186073d1" alt="image (4)" width="400" />
 </p>
+
+
 ### 🔒 LockModeType 종류 정리
 
 | LockModeType                | 설명 |

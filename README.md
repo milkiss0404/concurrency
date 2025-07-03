@@ -132,9 +132,9 @@ JPA는 낙관적 락을 위해 `@Version` 어노테이션을 제공하고 있�
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c82c4b17-5c7a-443e-9aa6-be5ccdee81ce" alt="image (2)" width="400" />
-  <img src="https://github.com/user-attachments/assets/c5b3cede-1f70-4405-ab8d-8fc63c0670ee" alt="image (3)" width="400" />
-  <img src="https://github.com/user-attachments/assets/248197a2-f8db-4b3f-b45a-938d186073d1" alt="image (4)" width="400" />
+  <img src="https://github.com/user-attachments/assets/c82c4b17-5c7a-443e-9aa6-be5ccdee81ce" alt="image (2)" width="600" />
+  <img src="https://github.com/user-attachments/assets/c5b3cede-1f70-4405-ab8d-8fc63c0670ee" alt="image (3)" width="600" />
+  <img src="https://github.com/user-attachments/assets/248197a2-f8db-4b3f-b45a-938d186073d1" alt="image (4)" width="600" />
 </p>
 
 

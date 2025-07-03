@@ -73,8 +73,9 @@ ReentrantLock은 재진입 가능한 락으로, 한 스레드가 이미 확보�
 왜냐하면 ReentrantLock을 사용하면 락을 획득하고 해제하는 과정을 개발자가 직접 제어할 수 있기 때문입니다. 이는 락의 범위와 시점을 더 세밀하게 관리할 수 있게 해줍니다.
 
 
-![image](https://github.com/user-attachments/assets/3d0a435d-ca20-4eeb-a114-ef6c27fe4886)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3d0a435d-ca20-4eeb-a114-ef6c27fe4886" alt="image" width="600"/>
+</p>
 
 synchronized 와 ReentrantLock의 차이점
 
@@ -129,11 +130,12 @@ JPA는 낙관적 락을 위해 `@Version` 어노테이션을 제공하고 있�
 - 비관적 잠금이란, 데이터를 읽은 후 변경할 가능성이 있는 경우, 데이터를 읽는 즉시 해당 데이터에 대한 잠금을 설정함으로써 다른 트랜잭션에서 해당 데이터를 변경하지 못하도록 하는 방법
 - 해당 엔티티를 읽는 즉시 쓰기 잠금이 설정되어, 해당 엔티티를 읽은 트랜잭션이 완료될 때까지 다른 트랜잭션에서는 해당 엔티티를 읽거나 쓸 수 없게 됨
 
-![image (2)](https://github.com/user-attachments/assets/c82c4b17-5c7a-443e-9aa6-be5ccdee81ce)
-![image (3)](https://github.com/user-attachments/assets/c5b3cede-1f70-4405-ab8d-8fc63c0670ee)
-![image (4)](https://github.com/user-attachments/assets/248197a2-f8db-4b3f-b45a-938d186073d1)
 
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c82c4b17-5c7a-443e-9aa6-be5ccdee81ce" alt="image (2)" width="400" />
+  <img src="https://github.com/user-attachments/assets/c5b3cede-1f70-4405-ab8d-8fc63c0670ee" alt="image (3)" width="400" />
+  <img src="https://github.com/user-attachments/assets/248197a2-f8db-4b3f-b45a-938d186073d1" alt="image (4)" width="400" />
+</p>
 ### 🔒 LockModeType 종류 정리
 
 | LockModeType                | 설명 |
@@ -171,9 +173,11 @@ Named Lock은 Redis를 사용하기 위한 인프라 구축, 유지보수 비용
 **비즈니스 로직(재고 감소)은 내부 서비스에서 `@Transactional(propagation = REQUIRES_NEW)`로 실행**하는 패턴은 **동시성 제어와 트랜잭션 분리**를 동시에 해결할 수 있는 패턴입니다
 
 
-![image (5)](https://github.com/user-attachments/assets/22ae1735-15b9-4b97-81a1-1df691b856de)
-![image (6)](https://github.com/user-attachments/assets/a89d1b9d-8ae1-48f0-a399-f32a41bc732b)
-![image (7)](https://github.com/user-attachments/assets/cef29163-7ec0-47ff-b2f2-c3d464104187)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/22ae1735-15b9-4b97-81a1-1df691b856de" alt="image (5)" width="300" />
+  <img src="https://github.com/user-attachments/assets/a89d1b9d-8ae1-48f0-a399-f32a41bc732b" alt="image (6)" width="300" />
+  <img src="https://github.com/user-attachments/assets/cef29163-7ec0-47ff-b2f2-c3d464104187" alt="image (7)" width="300" />
+</p>
 
 
 **Redis를 활용한 분산 락(Lettuce)**
@@ -192,10 +196,11 @@ Named Lock은 Redis를 사용하기 위한 인프라 구축, 유지보수 비용
     - MySQL Named Lock과 비슷함
     - 세션 관리에 신경을 쓰지 않아도 됨
 
-![image (8)](https://github.com/user-attachments/assets/a0a2d2c9-da9e-4897-8d80-f5fd128c6c2c)
-![image (9)](https://github.com/user-attachments/assets/196f9a8f-2b1a-466f-a1ff-111ef13638cf)
 
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a0a2d2c9-da9e-4897-8d80-f5fd128c6c2c" alt="image (8)" width="350" />
+  <img src="https://github.com/user-attachments/assets/196f9a8f-2b1a-466f-a1ff-111ef13638cf" alt="image (9)" width="350" />
+</p>
 
 
   ### 스핀 락 방식으로 인한 문제점
@@ -213,9 +218,11 @@ Named Lock은 Redis를 사용하기 위한 인프라 구축, 유지보수 비용
     - Redisson 라이브러리 추가하기
     - Redisson은 lock 관련 class를 라이브러리에서 제공해주기 때문에 별도의 repository를 작성하지 않아도 됩니다.
  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5cb6fa36-f9e4-49bd-ab7d-fced46393cf9" alt="image (10)" width="350" />
+  <img src="https://github.com/user-attachments/assets/6fa323cf-d57c-4cbc-86a3-18c97009dea1" alt="image (11)" width="350" />
+</p>
 
-![image (10)](https://github.com/user-attachments/assets/5cb6fa36-f9e4-49bd-ab7d-fced46393cf9)
-![image (11)](https://github.com/user-attachments/assets/6fa323cf-d57c-4cbc-86a3-18c97009dea1)
 
 - 재시도가 필요한 경우에는 redisson 활용
 - 재시도가 필요하지 않은 경우에는 lettuce 활용

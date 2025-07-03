@@ -4,7 +4,7 @@
 </p>
 
 # 동시성문제 해결하기 자바 , JPA ,
-Mysql Named Lock, Redis Lettuce, Redison
+# Mysql Named Lock, Redis Lettuce, Redison
 
 멀티 스레드를 사용하는 환경에서 각 스레드가 공유 자원에 동시에 접근하는 상황이라면 경쟁상태(Race condition)가 발생할 수 있습니다. 경쟁상태가 발생하게 되는 원인은 가시성(Visibility)과 원자성(Mutual Exclusion)을 보장하지 못했기 때문입니다. Java에서는 synchronized 키워드와 Atomic Type, Concurrent Collection 등을 통해 이와 같은 동시성 문제를 해결할 수 있습니다.
 

@@ -33,7 +33,7 @@ ex: 스레드 1이 CPU캐시에서 변수값을 수정,
 `ExecutorService` 인터페이스로 스레드를 컨트롤할수있습니다. 동시에 카운터가  1씩 100개의 스레드를 동시에 실행시켜 정확히 100 이오르는지 확인하겠습니다.
 
 실패하는코드
-```
+```java
     @Test
     void originalTest_Fail() throws Exception {
         int loop = 100;
@@ -52,7 +52,7 @@ ex: 스레드 1이 CPU캐시에서 변수값을 수정,
 
 성공 -synchronized 로 원자성을 보장받아 동시성을 해결할수있습니다.
 
-```
+```java
 @Test
     void synchronizedTest_Success() throws Exception {
         int loop = 100;

@@ -121,9 +121,8 @@ JPA는 낙관적 락을 위해 `@Version` 어노테이션을 제공하고 있�
 
 
 <p align="center">
-![image (1)](https://github.com/user-attachments/assets/b671f6f7-5852-482a-ad97-fafdc5d79517)
+  <img src="https://github.com/user-attachments/assets/b671f6f7-5852-482a-ad97-fafdc5d79517" alt="image (1)" width="600"/>
 </p>
-
 
 **2. 비관적 락 @Lock(PESSIMISTIC_WRITE)**
 

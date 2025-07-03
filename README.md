@@ -176,9 +176,9 @@ Named Lock은 Redis를 사용하기 위한 인프라 구축, 유지보수 비용
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/22ae1735-15b9-4b97-81a1-1df691b856de" alt="image (5)" width="300" />
-  <img src="https://github.com/user-attachments/assets/a89d1b9d-8ae1-48f0-a399-f32a41bc732b" alt="image (6)" width="300" />
-  <img src="https://github.com/user-attachments/assets/cef29163-7ec0-47ff-b2f2-c3d464104187" alt="image (7)" width="300" />
+  <img src="https://github.com/user-attachments/assets/22ae1735-15b9-4b97-81a1-1df691b856de" alt="image (5)" width="600" />
+  <img src="https://github.com/user-attachments/assets/a89d1b9d-8ae1-48f0-a399-f32a41bc732b" alt="image (6)" width="600" />
+  <img src="https://github.com/user-attachments/assets/cef29163-7ec0-47ff-b2f2-c3d464104187" alt="image (7)" width="600" />
 </p>
 
 
@@ -200,8 +200,8 @@ Named Lock은 Redis를 사용하기 위한 인프라 구축, 유지보수 비용
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a0a2d2c9-da9e-4897-8d80-f5fd128c6c2c" alt="image (8)" width="350" />
-  <img src="https://github.com/user-attachments/assets/196f9a8f-2b1a-466f-a1ff-111ef13638cf" alt="image (9)" width="350" />
+  <img src="https://github.com/user-attachments/assets/a0a2d2c9-da9e-4897-8d80-f5fd128c6c2c" alt="image (8)" width="600" />
+  <img src="https://github.com/user-attachments/assets/196f9a8f-2b1a-466f-a1ff-111ef13638cf" alt="image (9)" width="600" />
 </p>
 
 
@@ -221,8 +221,8 @@ Named Lock은 Redis를 사용하기 위한 인프라 구축, 유지보수 비용
     - Redisson은 lock 관련 class를 라이브러리에서 제공해주기 때문에 별도의 repository를 작성하지 않아도 됩니다.
  
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5cb6fa36-f9e4-49bd-ab7d-fced46393cf9" alt="image (10)" width="350" />
-  <img src="https://github.com/user-attachments/assets/6fa323cf-d57c-4cbc-86a3-18c97009dea1" alt="image (11)" width="350" />
+  <img src="https://github.com/user-attachments/assets/5cb6fa36-f9e4-49bd-ab7d-fced46393cf9" alt="image (10)" width="600" />
+  <img src="https://github.com/user-attachments/assets/6fa323cf-d57c-4cbc-86a3-18c97009dea1" alt="image (11)" width="600" />
 </p>
 
 

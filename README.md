@@ -208,7 +208,7 @@ Named Lock은 Redis를 사용하기 위한 인프라 구축, 유지보수 비용
 
 
 <p align="center">
-  <img src="ttps://github.com/user-attachments/assets/d8c2008d-73ee-490b-be14-c667dd3e2883" alt="image" width="600" />
+  <img src="https://github.com/user-attachments/assets/d8c2008d-73ee-490b-be14-c667dd3e2883" alt="image" width="600" />
   <img src="https://github.com/user-attachments/assets/196f9a8f-2b1a-466f-a1ff-111ef13638cf" alt="image (9)" width="600" />
 </p>
 

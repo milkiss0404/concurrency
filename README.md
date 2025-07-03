@@ -142,18 +142,14 @@ JPA는 낙관적 락을 위해 `@Version` 어노테이션을 제공하고 있�
 | `PESSIMISTIC_FORCE_INCREMENT` | ▪ 비관적 잠금 사용<br>▪ 잠금이 걸린 엔티티의 버전을 강제로 증가시킴<br>▪ 다른 트랜잭션에서 해당 엔티티를 읽을 때 충돌을 일으킴 |
 
 3. @Transactional isolation level을 조절해서 트랜잭션 접근 및 활동을 제한하는 방법
-격리 단계 (Isolation Level)	설명
-READ_UNCOMMITTED	 가장 낮은 격리 수준. 다른 트랜잭션에서 아직 커밋되지 않은 변경 내용을 읽을 수 있음. Dirty Read, Non-Repeatable Read, Phantom Read 모두 발생 가능.
-	 READ_UNCOMMITED는 기본 격리 수준이며, 추가 정보 없이도 트랜잭션 처리
-READ_COMMITTED	 다른 트랜잭션에서 커밋된 변경 내용만 읽을 수 있음. Dirty Read는 방지하지만, Non-Repeatable Read와 Phantom Read는 발생 가능.
-	 SELECT 쿼리에 FOR UPDATE 키워드를 추가하여, 읽은 데이터가 다른 트랜잭션에 의해 변경되지 않도록 잠금
-REPEATABLE_READ	 같은 트랜잭션 내에서 여러 번 데이터를 읽을 때 항상 같은 결과를 보장. Dirty Read와 Non-Repeatable Read는 방지하지만, Phantom Read는 발생 가능.
-	 SELECT 쿼리에 FOR UPDATE 키워드를 추가하여, 읽은 데이터가 다른 트랜잭션에 의해 변경되지 않도록 잠금
- 트랜잭션 시작 시점의 데이터 상태를 기록하여, 트랜잭션 진행 중에 다른 트랜잭션이 데이터를 변경해도 영향을 받지 않도록 함 (ReadView)
-SERIALIZABLE	가장 높은 격리 수준. 트랜잭션들을 순차적으로 실행하여 동시성 문제를 완전히 방지. 모든 동시성 문제를 방지하며, 가장 안전하지만 성능 저하가 발생할 수 있음.
-	 SELECT 쿼리에 FOR UPDATE 키워드를 추가하여, 읽은 데이터가 다른 트랜잭션에 의해 변경되지 않도록 잠금
- 트랜잭션 시작 시점의 데이터 상태를 기록하여, 트랜잭션 진행 중에 다른 트랜잭션이 데이터를 변경해도 영향을 받지 않도록 함 (ReadView)
- 모든 쿼리에 SERIALIZABLE 옵션을 추가하여, 모든 쿼리가 순차적으로 실행
+### 🧱 트랜잭션 격리 단계 (Isolation Level)
+
+| 격리 단계 (Isolation Level) | 설명 |
+|-----------------------------|------|
+| `READ_UNCOMMITTED` | ▪ 가장 낮은 격리 수준<br>▪ 다른 트랜잭션에서 **아직 커밋되지 않은 데이터(Dirty Read)** 도 읽을 수 있음<br>▪ Dirty Read, Non-Repeatable Read, Phantom Read 모두 발생 가능<br>▪ 기본 격리 수준이며, 추가 정보 없이도 트랜잭션 처리 |
+| `READ_COMMITTED` | ▪ 다른 트랜잭션에서 **커밋된 데이터만 읽음**<br>▪ Dirty Read 방지<br>▪ **Non-Repeatable Read, Phantom Read 발생 가능**<br>▪ `SELECT ... FOR UPDATE` 사용 시 읽은 데이터에 대한 잠금 가능 |
+| `REPEATABLE_READ` | ▪ 같은 트랜잭션 내에서 여러 번 읽어도 항상 같은 결과 보장<br>▪ **Dirty Read, Non-Repeatable Read 방지**<br>▪ Phantom Read는 발생 가능<br>▪ `SELECT ... FOR UPDATE` 사용 가능<br>▪ 트랜잭션 시작 시점의 스냅샷(ReadView)을 사용하여 다른 트랜잭션의 변경 영향을 받지 않음 |
+| `SERIALIZABLE` | ▪ 가장 높은 격리 수준<br>▪ 트랜잭션들을 **순차적으로 실행**하여 동시성 문제 완전 방지<br>▪ **모든 동시성 문제 방지** (Dirty, Non-Repeatable, Phantom 모두 방지)<br>▪ `SELECT ... FOR UPDATE` 사용 가능<br>▪ ReadView 사용<br>▪ 모든 쿼리에 SERIALIZABLE 옵션을 강제 적용 |
 
 
 ## mysql Named Lock
